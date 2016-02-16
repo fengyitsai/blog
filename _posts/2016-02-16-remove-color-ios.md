@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Remove Color"
+title:  "Remove a Color from UIImage"
 date:   2016-02-16 0:00:55
 categories: iOS
 comments: true
