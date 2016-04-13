@@ -152,7 +152,7 @@ Specifies a byte offset (cast to a pointer type) into the buffer bound to GL_ELE
 ----------
 Example:
 
-{% highlight objective-c %}
+```c
 
 typedef struct {
   GLfloat Position[2];
@@ -185,4 +185,4 @@ glClear(GL_COLOR_BUFFER_BIT);
 
 glDrawElements(GL_TRIANGLES, _vertex_num, GL_UNSIGNED_SHORT, 0);
 
-{% endhighlight %}
+```
