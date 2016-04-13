@@ -31,7 +31,11 @@ theme:
   google_webmaster_key: 
 
 # Build settings
-markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+gems: [jekyll-paginate]
 
 # Permalinks
 permalink:        pretty
