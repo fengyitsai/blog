@@ -41,6 +41,8 @@ Method Swizzle 顧名思義是用來交換兩個Method,
 @end
 ```
 
+--------------------
+
 >其中為什麼要使用+load, dispatch_once, [self xxx_function] 請參考Mattt的[這篇文章](http://nshipster.com/method-swizzling/)  
 >**[self xxx_function] 這行非常重要, 如果拿掉等於取消原本function的行為**  
 
@@ -68,9 +70,10 @@ Method Swizzle 顧名思義是用來交換兩個Method,
   
 上面可看出, 原本我們只是要改變ClassB的行為, 但無意中影響到了ClassA, 明顯表示這樣的實作是有問題的.
 
+-------------
 
 **所以在Mattt的文中提供了以下這種做法:**(為了保持一致性, 這邊修改了class和method的名稱)  
--------------
+
 
 ```obj-c
 
@@ -109,8 +112,8 @@ Method Swizzle 顧名思義是用來交換兩個Method,
 }
 @end
 ```
-  
-  
+
+
 這邊使用了class_addMethod為ClassB 增加selector為 “functionSEL”, Method為 "xxx_functionMethod". 的method.  
 
 > functionSEL -> xxx_functionMethod
