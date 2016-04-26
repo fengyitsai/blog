@@ -5,17 +5,20 @@ date:   2016-01-27 15:34:55
 categories: OpenGL iOS
 comments: true
 ---
-##OpenGL ES2 API
+
+## OpenGL ES2 API
 
 ----------
-###**glClear(GL_COLOR_BUFFER_BIT)**
-http://docs.gl/es2/glClear
+
+### **glClear(GL_COLOR_BUFFER_BIT)**
+
+<http://docs.gl/es2/glClear>
 
 glClear sets the bitplane area of the window to values previously selected by glClearColor, glClearDepth, and glClearStencil.
 
 使用之前glClearColor, glClearDepth, glClearStencil設定的值, 清除緩衝區
 
-參數:
+**Parameters**
 GL_COLOR_BUFFER_BIT
 Indicates the buffers currently enabled for color writing.
 
@@ -27,7 +30,9 @@ Indicates the stencil buffer.
 
 
 ----------
-###**void glGenBuffers(	GLsizei  	n,GLuint *  	buffers)**
+
+### **void glGenBuffers(	GLsizei  	n,GLuint *  	buffers)**
+
 http://docs.gl/es2/glGenBuffers
 
 generate buffer object names, 建立緩衝區
@@ -42,7 +47,8 @@ Specifies an array in which the generated buffer object names are stored.
 
 
 ----------
-###**void glBindBuffer(	GLenum target, GLuint buffer);**
+
+### **void glBindBuffer(	GLenum target, GLuint buffer);**
 
 bind a named buffer object
 
@@ -56,7 +62,8 @@ Specifies the name of a buffer object.
 
 
 ----------
-###**void glBufferData(	GLenum target, GLsizeiptr size,const GLvoid * data, GLenum usage);**
+
+### **void glBufferData(	GLenum target, GLsizeiptr size,const GLvoid * data, GLenum usage);**
 
 create and initialize a buffer object's data store
 
@@ -76,7 +83,9 @@ Specifies the expected usage pattern of the data store. The symbolic constant mu
 
 
 ----------
-###**glEnableVertexAttribArray (GLuint index)**
+
+### **glEnableVertexAttribArray (GLuint index)**
+
 http://docs.gl/es2/glEnableVertexAttribArray
 
 enable a generic vertex attribute array, 給shader存取
@@ -94,7 +103,8 @@ typedef NS_ENUM(GLint, GLKVertexAttrib)
 
 
 ----------
-###**void glVertexAttribPointer( GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const GLvoid * pointer);**
+
+### **void glVertexAttribPointer( GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const GLvoid * pointer);**
 
 需要先enable vertex attribute
 define an array of generic vertex attribute data
@@ -130,7 +140,8 @@ Specifies a pointer to the first component of the first generic vertex attribute
 
 
 ----------
-###**void glDrawElements( GLenum mode, GLsizei count, GLenum type, const GLvoid * indices);**
+
+### **void glDrawElements( GLenum mode, GLsizei count, GLenum type, const GLvoid * indices);**
 
 render primitives from array data
 
