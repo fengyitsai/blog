@@ -117,10 +117,10 @@ define an array of generic vertex attribute data
 **Parameters**  
 
 index  
-Specifies the index of the generic vertex attribute to be modified.  
-參數:  
-
+Specifies the index of the generic vertex attribute to be modified.   
+ 
 ```c
+參數: 
 typedef NS_ENUM(GLint, GLKVertexAttrib)
 {
     GLKVertexAttribPosition,
