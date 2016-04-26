@@ -34,7 +34,7 @@ Indicates the stencil buffer.
 
 ### **void glGenBuffers(	GLsizei  	n,GLuint *  	buffers)**
 
-http://docs.gl/es2/glGenBuffers
+<http://docs.gl/es2/glGenBuffers>
 
 generate buffer object names, 建立緩衝區  
 
@@ -90,11 +90,12 @@ Specifies the expected usage pattern of the data store. The symbolic constant mu
 
 ### **glEnableVertexAttribArray (GLuint index)**
 
-http://docs.gl/es2/glEnableVertexAttribArray
+<http://docs.gl/es2/glEnableVertexAttribArray>
 
 enable a generic vertex attribute array, 給shader存取
-使用後需disable
+使用後需disable  
 
+```c
 參數:
 typedef NS_ENUM(GLint, GLKVertexAttrib)
 {
@@ -104,7 +105,7 @@ typedef NS_ENUM(GLint, GLKVertexAttrib)
     GLKVertexAttribTexCoord0,
     GLKVertexAttribTexCoord1
 } NS_ENUM_AVAILABLE(10_8, 5_0);
-
+```
 
 ----------
 
@@ -117,7 +118,9 @@ define an array of generic vertex attribute data
 
 index  
 Specifies the index of the generic vertex attribute to be modified.  
-參數:
+參數:  
+
+```c
 typedef NS_ENUM(GLint, GLKVertexAttrib)
 {
     GLKVertexAttribPosition,
@@ -126,7 +129,8 @@ typedef NS_ENUM(GLint, GLKVertexAttrib)
     GLKVertexAttribTexCoord0,
     GLKVertexAttribTexCoord1
 } NS_ENUM_AVAILABLE(10_8, 5_0);
-
+```
+  
 size vertex中的屬性要多少size (如果x,y,z就是3)  
 Specifies the number of components per generic vertex attribute. Must be 1, 2, 3, or 4. The initial value is 4.  
 
