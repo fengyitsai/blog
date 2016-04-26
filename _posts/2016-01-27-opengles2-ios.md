@@ -18,7 +18,8 @@ glClear sets the bitplane area of the window to values previously selected by gl
 
 使用之前glClearColor, glClearDepth, glClearStencil設定的值, 清除緩衝區  
 
-**Parameters**
+**Parameters**  
+
 GL_COLOR_BUFFER_BIT  
 Indicates the buffers currently enabled for color writing.
 
@@ -37,7 +38,8 @@ http://docs.gl/es2/glGenBuffers
 
 generate buffer object names, 建立緩衝區  
 
-**Parameters**
+**Parameters**  
+
 n  
 Specifies the number of buffer object names to be generated.  
 
@@ -52,7 +54,8 @@ Specifies an array in which the generated buffer object names are stored.
 
 bind a named buffer object
 
-**Parameters**
+**Parameters**  
+
 target  
 Specifies the target to which the buffer object is bound. The symbolic constant must be GL_ARRAY_BUFFER or GL_ELEMENT_ARRAY_BUFFER.  
 
@@ -67,7 +70,8 @@ Specifies the name of a buffer object.
 
 create and initialize a buffer object's data store
 
-**Parameters**
+**Parameters**  
+
 target  
 Specifies the target buffer object. The symbolic constant must be GL_ARRAY_BUFFER or GL_ELEMENT_ARRAY_BUFFER.  
 
@@ -109,7 +113,8 @@ typedef NS_ENUM(GLint, GLKVertexAttrib)
 需要先enable vertex attribute  
 define an array of generic vertex attribute data  
 
-**Parameters**
+**Parameters**  
+
 index  
 Specifies the index of the generic vertex attribute to be modified.  
 參數:
@@ -144,7 +149,8 @@ Specifies a pointer to the first component of the first generic vertex attribute
 
 render primitives from array data  
 
-**Parameters**
+**Parameters**  
+
 mode  
 Specifies what kind of primitives to render. Symbolic constants GL_POINTS, GL_LINE_STRIP, GL_LINE_LOOP, GL_LINES, GL_TRIANGLE_STRIP, GL_TRIANGLE_FAN and GL_TRIANGLES are accepted.  
 
