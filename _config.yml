@@ -27,7 +27,7 @@ theme:
   disqus_shortname: fengyitsai
 
   # Google Analytics/Webmaster key, leave blank to ignore
-  google_analytics_key: 
+  google_analytics_key: UA-77732336-1
   google_webmaster_key: 
 
 # Build settings
