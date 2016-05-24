@@ -25,8 +25,7 @@ CoreGraphics只提供了一般陰影的API, 要做到內陰影需要自行處理
   
 ```obj-c
 //步驟一: 先產生黑白相反的圖(以下稱mask)  
-+ (UIImage *)inverseImage:(UIImage *)image
-{
++ (UIImage *)inverseImage:(UIImage *)image{
     CGRect rect = { CGPointZero, image.size };
     CGFloat scale = image.scale;
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, scale);
@@ -51,8 +50,7 @@ CoreGraphics只提供了一般陰影的API, 要做到內陰影需要自行處理
 
 ```obj-c
 //步驟二: 以原圖當作遮罩 繪製mask的陰影
-+ (UIImage *)shadowFromImage:(UIImage *)image mask:(UIImage *)mask texture:(UIColor *)texture shadowColor:(UIColor *) shadowColor shadowBlur:(CGFloat)shadowBlur shadowOffset:(CGSize) shadowOffset
-{
++ (UIImage *)shadowFromImage:(UIImage *)image mask:(UIImage *)mask texture:(UIColor *)texture shadowColor:(UIColor *) shadowColor shadowBlur:(CGFloat)shadowBlur shadowOffset:(CGSize) shadowOffset{
     CGRect rect = { CGPointZero, mask.size };
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, mask.scale);
     CGContextRef context = UIGraphicsGetCurrentContext();
@@ -107,8 +105,7 @@ CoreGraphics只提供了一般陰影的API, 要做到內陰影需要自行處理
 
 ```obj-c
 //步驟四: 合成步驟2.3.產生的圖
-+(UIImage*)createCombineImage:(NSArray*)images
-{
++(UIImage*)createCombineImage:(NSArray*)images{
     UIImage* firstImg = images.firstObject;
     
     CGRect rect = { CGPointZero, firstImg.size };
