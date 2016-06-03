@@ -16,13 +16,13 @@ There are two sorted arrays nums1 and nums2 of size m and n respectively. Find t
 這時會有三種情況:  
 
 1.  **nums1[index1] > nums2[index2]**  
-    *	表示 nums2[index2] \(包含) 之前的item都不可能是第N個, 因此可以忽略, 並把N-(index2+1)   (註1)  
+   - 表示 nums2[index2] \(包含) 之前的item都不可能是第N個, 因此可以忽略, 並把N-(index2+1)   (註1)  
   
 2.  **nums1[index1] < nums2[index2]** 
-    *	表示 nums1[index1] \(包含) 之前的item都不可能是第N個, 因此可以忽略, 並把N-(index1+1)  
+   - 表示 nums1[index1] \(包含) 之前的item都不可能是第N個, 因此可以忽略, 並把N-(index1+1)  
   
 3.  **nums1[index1] = nums2[index2]**  
-    *   表示 nums1[index1] nums2[index2] 都可以是第N個  
+   - 表示 nums1[index1] nums2[index2] 都可以是第N個  
 
 遞迴可得出最後答案.
 
