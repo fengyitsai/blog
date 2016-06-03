@@ -32,7 +32,7 @@ theme:
 
 # Build settings
 kramdown:
-  input: Markdown
+  input: kramdown
 #   syntax_highlighter: rouge
 
 gems: [jekyll-paginate]
