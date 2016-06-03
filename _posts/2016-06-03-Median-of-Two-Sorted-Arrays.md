@@ -5,7 +5,7 @@ date:   2016-05-23 0:00:55
 categories: ios
 comments: true
 ---
-###LeetCode: Median of Two Sorted Arrays
+###  LeetCode: Median of Two Sorted Arrays
 
 There are two sorted arrays nums1 and nums2 of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
 
@@ -16,11 +16,11 @@ There are two sorted arrays nums1 and nums2 of size m and n respectively. Find t
 這時會有三種情況:  
 
 *  nums1[index1] > nums2[index2]  
-	*	表示 nums2[index2] (包含) 之前的item都不可能是第N個, 因此可以忽略, 並把N-(index2+1)   (註1)
-*  nums1[index1] < nums2[index2]
- 	*	表示 nums1[index1] (包含) 之前的item都不可能是第N個, 因此可以忽略, 並把N-(index1+1)
-*  nums1[index1] = nums2[index2]
-	*   表示 nums1[index1] nums2[index2] 都可以是第N個
+* *	表示 nums2[index2] (包含) 之前的item都不可能是第N個, 因此可以忽略, 並把N-(index2+1)   (註1)  
+*  nums1[index1] < nums2[index2]  
+* *	表示 nums1[index1] (包含) 之前的item都不可能是第N個, 因此可以忽略, 並把N-(index1+1)  
+*  nums1[index1] = nums2[index2]  
+* *   表示 nums1[index1] nums2[index2] 都可以是第N個  
 
 遞迴可得出最後答案.
 
