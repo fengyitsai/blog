@@ -15,21 +15,22 @@ There are two sorted arrays nums1 and nums2 of size m and n respectively. Find t
 而其中 index1+index2 要等於 N-2
 這時會有三種情況:  
 
-*  nums1[index1] > nums2[index2]  
-* *	表示 nums2[index2] (包含) 之前的item都不可能是第N個, 因此可以忽略, 並把N-(index2+1)   (註1)  
-*  nums1[index1] < nums2[index2]  
-* *	表示 nums1[index1] (包含) 之前的item都不可能是第N個, 因此可以忽略, 並把N-(index1+1)  
-*  nums1[index1] = nums2[index2]  
-* *   表示 nums1[index1] nums2[index2] 都可以是第N個  
+1.  **nums1[index1] > nums2[index2]**  
+  *	表示 nums2[index2] (包含) 之前的item都不可能是第N個, 因此可以忽略, 並把N-(index2+1)   (註1)  
+2.  **nums1[index1] < nums2[index2]** 
+  *	表示 nums1[index1] (包含) 之前的item都不可能是第N個, 因此可以忽略, 並把N-(index1+1)  
+3.  **nums1[index1] = nums2[index2]**  
+  *   表示 nums1[index1] nums2[index2] 都可以是第N個  
 
 遞迴可得出最後答案.
 
-> 註1:假設nums2[index2] 是第N個數, 那前面必須要有N-1個比較小的item,   
-> 	而 nums1[index1] 比 nums2[index2] 大, 所以前面最多有 index1 個item比 nums2[index2] 小(<=)   
-> 	而index2 前面也有 index2個item比 nums2[index2] 小(<=)
-> 	所以加起來是 index1 + index2,  
-> 	而因為 index1+index2 等於 N-2,  
-> 	由 N-2 < N-1 可知 nums2[index2] 不可能第N個數
+> 註1:  
+> 假設nums2[index2] 是第N個數, 那前面必須要有N-1個比較小的item,   
+> 而 nums1[index1] 比 nums2[index2] 大, 所以前面最多有 index1 個item比 nums2[index2] 小(<=)   
+> 而index2 前面也有 index2個item比 nums2[index2] 小(<=)
+> 所以加起來是 index1 + index2,  
+> 因為 index1+index2 等於 N-2,  
+> 由 N-2 < N-1 可知 nums2[index2] 不可能第N個數
 
 
 
