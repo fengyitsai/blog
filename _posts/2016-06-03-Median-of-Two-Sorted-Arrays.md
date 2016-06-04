@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode: Median of Two Sorted Arrays"
 date:   2016-05-23 0:00:55
-categories: ios
+categories: leetcode
 comments: true
 ---
 ###  LeetCode: Median of Two Sorted Arrays
