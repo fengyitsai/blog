@@ -300,47 +300,47 @@ tbody tr:nth-child(odd) th {
     #TYPOGRAPHY-CODE
 \*------------------------------------*/
 
-code,
-pre {
-  font-family: Menlo, Monaco, "Courier New", monospace;
-}
+// code,
+// pre {
+//   font-family: Menlo, Monaco, "Courier New", monospace;
+// }
 
-code {
-  padding: 2px .5em;
-  color: #bf616a;
-  background-color: #f9f9f9;
-  border-radius: 2px;
-}
+// code {
+//   padding: 2px .5em;
+//   color: #bf616a;
+//   background-color: #f9f9f9;
+//   border-radius: 2px;
+// }
 
-pre {
-  display: block;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  line-height: 1.4;
-  font-size: 15px;
-  white-space: pre;
-  white-space: pre-wrap;
-  word-break: break-all;
-  word-wrap: break-word;
-  background-color: #f9f9f9;
-  border-radius: 3px;
-}
-pre code {
-  padding: 0;
-  font-size: 100%;
-  color: inherit;
-  background-color: transparent;
-}
+// pre {
+//   display: block;
+//   margin-top: 0;
+//   margin-bottom: 1rem;
+//   padding: 1rem;
+//   line-height: 1.4;
+//   font-size: 15px;
+//   white-space: pre;
+//   white-space: pre-wrap;
+//   word-break: break-all;
+//   word-wrap: break-word;
+//   background-color: #f9f9f9;
+//   border-radius: 3px;
+// }
+// pre code {
+//   padding: 0;
+//   font-size: 100%;
+//   color: inherit;
+//   background-color: transparent;
+// }
 
-/* Pygments via Jekyll */
-.highlight {
-  margin-bottom: 1rem;
-  border-radius: 4px;
-}
-.highlight pre {
-  margin-bottom: 0;
-}
+// /* Pygments via Jekyll */
+// .highlight {
+//   margin-bottom: 1rem;
+//   border-radius: 4px;
+// }
+// .highlight pre {
+//   margin-bottom: 0;
+// }
 
 /* Gist via GitHub Pages */
 .gist .gist-file {

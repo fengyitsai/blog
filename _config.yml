@@ -5,7 +5,7 @@ email: fengyi.tsai@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Hello
 baseurl: "/blog" # the subpath of your site, e.g. /blog/
-url: "http://fengyitsai.github.io" # the base hostname & protocol for your site
+url: "https://fengyitsai.github.io" # the base hostname & protocol for your site
 logourl: /assets/images/logo.png # Site logo
 author: "Fengyi Tsai"
 author_thumbnail: "/assets/images/avatar.png" # Author avatar
@@ -27,11 +27,15 @@ theme:
   disqus_shortname: fengyitsai
 
   # Google Analytics/Webmaster key, leave blank to ignore
-  google_analytics_key: 
+  google_analytics_key: UA-77732336-1
   google_webmaster_key: 
 
 # Build settings
-markdown: kramdown
+kramdown:
+  input: GFM
+#   syntax_highlighter: rouge
+
+gems: [jekyll-paginate]
 
 # Permalinks
 permalink:        pretty

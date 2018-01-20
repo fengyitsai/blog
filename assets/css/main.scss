@@ -549,6 +549,17 @@ img {
   padding: 1em 0;
 }
 
+article p{
+  font-size: 18px;
+  line-height: 2.4;
+}
+
+code.hljs{
+  font-size: 18px;
+  line-height: 1.6;
+  background: #F9F9F9;
+}
+
 /* Meta info after post-title */
 .post-meta {
   color: $gray-light;
