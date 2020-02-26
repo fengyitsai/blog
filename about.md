@@ -6,7 +6,7 @@ banner_image: banner.jpg
 banner_image_alt: About me
 ---
 
-Hi, I am Fengyi.
+Hi, I am Fengyi. Contact  me: fytsai@outlook.com 
 
 ---
 
