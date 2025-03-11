@@ -51,6 +51,7 @@ GEM
       octokit (~> 4.0)
       public_suffix (~> 1.4)
       typhoeus (~> 0.7)
+
     html-pipeline (2.4.0)
       activesupport (>= 2, < 5)
       nokogiri (>= 1.8.1)
