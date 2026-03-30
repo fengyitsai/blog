@@ -1,71 +1,121 @@
 ---
-layout: default
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description | strip_html | strip_newlines | truncate: 160 }}">
+  <link rel="icon" href="{{ site.baseurl }}/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  {% assign post_url = post.url | append: '/' | replace: '//', '/' | prepend: site.baseurl | prepend: site.url | %}
-  <article class="post">
-
-    {% if post.banner_image %}
-    <div class="banner-image">
-      <a href="{{ post_url }}"
-        title="{{ post.title }}">
-      <img 
-          src="{{ "/assets/images/" | append: post.banner_image | prepend: site.baseurl | prepend: site.url }}" 
-          alt="{% if post.banner_image_alt %}{{ post.banner_image_alt }}{% else %}{{ post.title }} {% endif %}">
-      </a>
-    </div>
-    {% endif %}
-
-    <h1 class="post-title">
-      <a href="{{ post.url | append: '/' | replace: '//', '/' | prepend: site.baseurl | prepend: site.url |  }}">
-        {{ post.title }}
-      </a>
-    </h1>
-
-    <p class="post-meta">
-    {% if (post.categories.size > 0 %}
-      <span class="categories">
-      {{ post.categories | array_to_sentence_string }}
-      </span> |
-    {% endif %}
-    <span class="post-date">
-    {{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}  
-    </span>
-    </p>
-
-    {{ post.excerpt }}
-    <a href="{{ post.url | append: '/' | replace: '//', '/' | prepend: site.baseurl | prepend: site.url |  }}">
-      Continue reading »
-    </a>
-  </article>
-  {% endfor %}
-</div>
-
-{% if paginator.total_pages > 1 %}
-<div class="pagination">
-  
-  {% if paginator.next_page %}
-      <a class="pagination-item older btn" href="{{ paginator.next_page_path | prepend: site.baseurl | append: '/' | replace: '//', '/' }}">Older</a>    
-  {% else %}
-    <span class="pagination-item older btn-disabled">Older</span>
-  {% endif %}
-  
-  {% if paginator.previous_page %}
-    <a class="pagination-item newer btn " href="{{ paginator.previous_page_path | prepend: site.baseurl | append: '/' | replace: '//', '/' }}">Newer</a>
-  {% else %}
-    <span class="pagination-item newer btn-disabled">Newer</span>
-  {% endif %}  
-  
-</div>
-{% endif %}
-
-<script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "WebSite",
-    "url": "{{ '' | prepend: site.baseurl | prepend: site.url | append: '/' }}"
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      line-height: 1.6;
     }
-}
-</script>
+
+    .container {
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 2rem;
+      border: 2px solid #222;
+      transition: border-color 0.3s;
+    }
+
+    .avatar:hover {
+      border-color: #555;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+
+    .tagline {
+      font-size: 0.95rem;
+      color: #777;
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+
+    .bio {
+      font-size: 0.95rem;
+      color: #999;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .links a {
+      color: #666;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid transparent;
+    }
+
+    .links a:hover {
+      color: #fff;
+      border-bottom-color: #444;
+    }
+
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: #333;
+      margin: 0 auto 2rem;
+    }
+
+    @media (max-width: 480px) {
+      body { padding: 1.5rem; }
+      h1 { font-size: 1.5rem; }
+      .avatar { width: 100px; height: 100px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="avatar" src="{{ site.baseurl }}/assets/images/avatar.png" alt="{{ site.author }}">
+    <h1>{{ site.author }}</h1>
+    <p class="tagline">Software Engineer</p>
+    <div class="divider"></div>
+    <p class="bio">
+      Hi, I'm Fengyi. Feel free to reach out — I'm always open to interesting conversations and collaborations.
+    </p>
+    <div class="links">
+      <a href="mailto:{{ site.email }}">Email</a>
+      <a href="https://github.com/{{ site.theme.social.github }}" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</body>
+</html>
